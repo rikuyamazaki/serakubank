@@ -1,0 +1,560 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body:not(.footer p) {
+    width: 1260px;
+    margin: 0 auto;
+    overflow-y: scroll;
+}
+
+img {
+    vertical-align: middle;
+}
+
+.header {
+    width: 1260px;
+    margin: 0 auto;
+}
+
+.wrapper {
+    width: 1260px;
+    margin: 30px auto 40px;
+}
+
+
+.sidemenu {
+    float: left;
+    width: 360px;
+}
+
+.footer {
+    height: 30px;
+    line-height: 30px;
+    background-color: #00006d;
+    text-align: center;
+    font-size: 12px;
+    color: #fff;
+}
+
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.header {
+    height: 100px;
+}
+
+.main, .sidemenu {
+    height: 950px;
+}
+
+#site-logo {
+    margin-bottom: -20px;
+    margin-top: 30px;
+}
+/************** mainメニュー *****************/
+.main {
+    display: block;
+    float: right;
+    width: 810px;
+    margin-top: 30px;
+    margin-left: -20px;
+}
+
+.main .main_menu {
+    width: 390px;
+    float: left;
+}
+
+.main .sub_menu {
+    width: 390px;
+    float: right;
+}
+
+.main .under_left_menu {
+    width: 390px;
+    float: left;
+}
+
+.main .under_right_menu {
+    width: 390px;
+    float: right;
+}
+
+.main .main_menu h1 {
+    font-size: 18px;
+    color: #00006d;
+    border: solid #136c57;
+    border-width: 0 0 1px 15px;
+    padding: 10px 0 5px 15px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.main .sub_menu h1 {
+    font-size: 18px;
+    color: #00006d;
+    border: solid #136c57;
+    border-width: 0 0 1px 15px;
+    padding: 10px 0 5px 15px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.main .under_left_menu h1 {
+    font-size: 18px;
+    color: #00006d;
+    border: solid #136c57;
+    border-width: 0 0 1px 15px;
+    padding: 10px 0 5px 15px;
+    margin-top: 30px;
+}
+
+.main .under_right_menu h1 {
+    font-size: 18px;
+    color: #00006d;
+    border: solid #136c57;
+    border-width: 0 0 1px 15px;
+    padding: 10px 0 5px 15px;
+    margin-top: 30px;
+}
+
+
+.main_menu ul {
+    float: left;
+    width: 180px;
+    margin: 0;
+    padding: 0;
+}
+
+.sub_menu ul {
+    float: left;
+    width: 180px;
+    margin: 0;
+    padding: 0;
+}
+
+.under_left_menu ul {
+    float: left;
+    width: 180px;
+    margin: 0;
+    padding: 0;
+}
+
+.under_right_menu ul {
+    float: left;
+    width: 180px;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 40px;
+}
+
+.main_menu li {
+    padding-bottom: 20px;
+}
+
+.main_menu li a {
+    text-decoration: none;
+    font-size: 13px;
+    color: #40408d;
+}
+
+.sub_menu li {
+    padding-bottom: 20px;
+}
+
+.sub_menu li a {
+    text-decoration: none;
+    font-size: 13px;
+    color: #40408d;
+}
+
+.under_left_menu li {
+    padding-bottom: 20px;
+}
+
+.under_left_menu li a {
+    text-decoration: none;
+    font-size: 13px;
+    color: #40408d;
+}
+
+.under_right_menu li {
+    padding-bottom: 20px;
+}
+
+.under_right_menu li a {
+    text-decoration: none;
+    font-size: 13px;
+    color: #40408d;
+}
+/*********** mainメニューここまで **************/
+
+
+/*********** mainのニュース情報  ***************/
+
+.campaign ul {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    padding: 0;
+    background: #b2b2b2;
+    display: table;
+    table-layout: fixed;
+    height: 60px;
+    line-height: 60px;
+    border-bottom: 2px solid #2323b7;
+}
+
+.campaign li {
+    display: table-cell;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    border-right: 2px solid #fff;
+}
+
+.campaign a:link{
+    background: #b2b2b2;
+}
+
+.campaign .new a:visited {
+    background: #00006d;
+}
+
+.campaign a {
+    text-decoration: none;
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.campaign .notice {
+    border-right: none;
+}
+
+/*********** mainのニュース情報ここまで  ***************/
+
+/************* global-navi *************************/
+.global-link {
+    list-style-type: none;
+    font-size: 12px;
+    float: right;
+    margin-right: 25px;
+    margin-bottom: -5px;
+}
+
+.global-link a {
+    color: #40408d;
+}
+
+.font-size {
+    font-size: 12px;
+}
+
+.font-size ul,li {
+    list-style-type: none;
+}
+
+.font-size ul {
+    float: right;
+}
+
+.font-size ul li {
+    list-style-type: none;
+    display: inline-block;
+}
+
+.font-size input {
+    height: 25px;
+    width: 130px;
+    line-height: 25px;
+    text-align: center;
+    border: 1px solid #00006d;
+}
+
+ul.globalnavi {
+    width: 1260px;
+    background: #00006d;
+    overflow: hidden;
+    margin: 0 auto;
+    height: 40px;
+    line-height: 40px;
+    padding: 0;
+}
+
+ul.globalnavi li {
+    float: left;
+    padding: 0px;
+    width: 20%;
+    text-align: center;
+    border-right: solid 1px #fff;
+}
+
+ul.globalnavi li a {
+    display: block;
+    font-size: 13px;
+    color: #fff;
+    text-decoration: none;
+}
+
+ul.globalnavi li a:hover {
+    opacity: 0.5;
+}
+
+#naviarea .bank {
+    border-right-style: none;
+}
+/************** global-naviここまで **************/
+
+/************** news ***************************/
+
+.news {
+    font-size: 13px;
+    margin-right: -20px;
+    
+}
+
+.news tr th{
+    white-space: nowrap;
+    font-weight: normal;
+}
+
+.news td.cam,.info,.release {
+    white-space: nowrap;
+    width: 110px;
+    display: block;
+    text-align: center;
+    /*margin: 5px 30px 0 30px;*/
+    height: 20px;
+    line-height: 20px;
+    color: #fff;
+}
+
+.news .june td,.may td,.april td,.march td,.february td,.january td {
+    margin: 5px 30px 0 30px;
+}
+
+.news .december td,.november td,.october td {
+    margin: 5px 30px 0 22px;
+}
+
+.news td a {
+    color: #2323b7;
+}
+
+table,.may,.april,.march,.february,.january,.december,.november,.october {
+    margin: 30px 0;
+}
+
+.news .info {
+    background: #00c3e6;
+}
+
+.news .cam {
+    background: #f06c99;
+}
+
+.news .release {
+    background: #e0b72d;
+}
+
+/************** newsここまで ********************/
+
+/************* sidemenu ***********************/
+
+.sidemenu h1 {
+    font-size: 22px;
+    text-align: center;
+    color: #00006d;
+}
+
+.sidemenu p {
+    text-align: center;
+    font-size: 14px;
+}
+
+.login .service {
+    background: #00006d;
+    height: 50px;
+    line-height: 50px;
+    font-weight: bold;
+}
+
+.login .new {
+    background: #57ea57;
+    height: 50px;
+    line-height: 50px;
+    font-weight: bold;
+}
+
+.login .service a , .login .new a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+}
+
+.login .pass {
+    font-size: 13px;
+}
+
+.login .pass a {
+    color: #00006d;
+}
+
+.login a:hover {
+    opacity: 0.5;
+}
+
+.guide {
+    margin-top: 40px;
+}
+
+.guide ul {
+    margin: 0;
+    padding: 0;
+}
+
+.guide ul li {
+    float: left;
+    width: 32%;
+    text-align: center;
+    font-weight: bold;
+    height: 110px;
+    background: rgba(59, 147, 137, 0.99);
+    display: block;
+}
+
+.guide ul li.center,.qa {
+    margin: 0 6px 0 6px;
+}
+
+.guide ul li.center,.money,.fee{
+    line-height: 110px;
+}
+
+.guide ul li.store {
+    padding-top: 30px;
+}
+
+.guide ul li.qa,.tousi {
+    padding-top: 40px;
+}
+
+.guide .fee,.qa,.tousi {
+    margin-top: -34px;
+}
+
+.guide ul li a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+}
+
+.guide ul li a:hover {
+    opacity: 0.5;
+}
+
+.other {
+    margin-top: 40px;
+}
+
+.other h1 {
+    font-size: 16px;
+    color: #fff;
+    background: #00006d;
+    height: 50px;
+    line-height: 50px;
+}
+
+.other h1 a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+}
+
+.other h1 a:hover {
+    opacity: 0.5;
+}
+
+.other_two {
+    margin-top: 30px;
+}
+
+.other_two h1 {
+    background: rgb(73, 208, 73);
+}
+
+.cash {
+    margin-top: 30px;
+}
+
+/************* sidemenuここまで ****************/
+
+/************* under-menu ***********************/
+
+.under_menu {
+    width: 1260px;
+    height: 350px;
+    background: #eaeaea;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.under_menu .under_item {
+    width: 20%;
+    float: left;
+}
+
+.under_menu .under_item h1 {
+    font-size: 19px;
+    margin-left: 40px;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    color: #00006d;
+}
+
+.under_menu .under_item li {
+    margin-bottom: 12px;
+    font-size: 15px;
+}
+
+.under_menu .under_item li a {
+    color: #00006d;
+}
+
+/************* under-menuここまで ****************/
+
+/************* footer_menu ***********************/
+.footer_menu {
+    width: 1260px;
+    margin: 0 auto;
+}
+
+.footer_menu ul {
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: -20px;
+}
+
+.footer_menu li {
+    display: table-cell;
+    text-align: center;
+}
+
+.footer_menu ul li a {
+    color: #00006d;
+}
+
+
+
+/************* footer_menuここまで ***********************/
