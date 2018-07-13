@@ -296,6 +296,7 @@ img {
     line-height: 25px;
     text-align: center;
     border: 1px solid #00006d;
+    vertical-align: middle;
 }
 
 ul.globalnavi {
