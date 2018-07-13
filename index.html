@@ -17,15 +17,39 @@
                 });
             });
         </script>
+        <script>
+$(function() {
+// 「#tab」の「li」がクリックされると以下の処理を実行
+$(".tab li").click(function() {
+// 変数「tab」を定義する
+var tab = $(this).attr('id');
+// クリックされたタブにのみ「.select」を与える
+$(".tab li").removeClass('select');
+$(this).addClass('select');
+// クリックされたタブに紐づいた要素を表示、それ以外を非表示にする
+$("#choice dl").fadeOut(100);
+if(tab == 'news') {
+$("#choice .news").fadeIn(100);
+} else if(tab == 'campaign') {
+$("#choice .campaign").fadeIn(100);
+} else if(tab == 'notice') {
+$("#choice .notice").fadeIn(100);
+} else {
+$("#choice dl").fadeIn(100);
+}
+});
+});
+
+        </script>
     </head>
     <body>
         <header class="header">
             <h1 id="site-logo"><a href="index.html"><img src="images/logo.png"></a></h1>
             <div class="clearfix">
                 <div class="global-link">
-                <a href="#">global site</a>
-                &emsp;
-                <a href="#">site map</a>
+                    <a href="#">global site</a>
+                    &emsp;
+                    <a href="#">site map</a>
                 </div>
             </div>
             <div class="font-size">
@@ -117,91 +141,63 @@
                         <li><a href="#">＞&nbsp;中途採用</a></li>
                     </ul>
                 </div>
-                
-                <div class="campaign clearfix">
-                    <ul>
-                        <li class="new"><a href="#">新着情報</a></li>
-                        <li><a href="#">ニュースリリース</a></li>
-                        <li><a href="#">キャンペーン</a></li>
-                        <li class="notice"><a href="#">お知らせ</a></li>
+    
+                    <ul class="tab">
+                        <li class="select">新着情報</li>
+                        <li id="news">ニュースリリース</li>
+                        <li id="campaign">キャンペーン</li>
+                        <li id="notice">お知らせ</li>
                     </ul>
-                </div>
                 
-                <div class="news clearfix">
-                    <table class="june">
-                        <tr>
-                            <th><time class="date" datetime="2015-06-10">2015年6月10日</time></th>
-                            <td class="info">お知らせ</td>
-                            <td><a href="#">【インターネットバンキング】パスワード等を入力させる偽メールが届いても、絶対に入力しないでください！</a></td>
-                        </tr>
-                    </table>
+                <div id="choice">
                     
-                    <table class="may">
-                        <tr>
-                            <th><time class="date" datetime="2015-05-10">2015年5月10日</time></th>
-                            <td class="cam">キャンペーン</td>
-                            <td><a href="#">抽選で200人に1万円が当たる！夏の資産運用キャンペーン実施中。</a></td>
-                        </tr>
-                    </table>
+                    <dl class="notice">
+                        <dt>2015年6月10日</dt>
+                        <dd><span class="info">お知らせ</span><a href="#">【インターネットバンキング】パスワード等を入力させる偽メールが届いても、<br>絶対に入力しないでください！</a></dd>
+                     </dl>
                     
-                    <table class="april">
-                        <tr>
-                            <th><time class="date" datetime="2015-04-10">2015年4月10日</time></th>
-                            <td class="cam">キャンペーン</td>
-                            <td><a href="#">平成27年5月25日(月)より「子ども口座開設キャンペーン」を開始します。</a></td>
-                        </tr>
-                    </table>
+                    <dl class="campaign">
+                        <dt>2015年5月10日</dt>
+                        <dd><span class="cam">キャンペーン</span><a href="#">抽選で200人に1万円が当たる！夏の資産運用キャンペーン実施中。</a></dd>
+                    </dl>
+                        
+                    <dl class="campaign">
+                        <dt>2015年4月10日</dt>
+                        <dd><span class="cam">キャンペーン</span><a href="#">平成27年5月25日(月)より「子ども口座開設キャンペーン」を開始します。</a></dd>
+                    </dl>
+                        
+                    <dl class="notice">
+                        <dt>2015年3月10日</dt>
+                        <dd><span class="info">お知らせ</span><a href="#">「年金情報流出」を口実にした振込め詐欺や個人情報の搾取にご注意ください。</a></dd>
+                    </dl>
+                        
+                    <dl class="news">
+                        <dt>2015年2月10日</dt>
+                        <dd><span class="rel">ニュースリリース</span><a href="#">スウェーデンせらく銀行○○支店開業についてpdf(97KB)</a></dd>
+                    </dl>
+                        
+                    <dl class="notice">
+                        <dt>2015年1月10日</dt>
+                        <dd><span class="info">お知らせ</span><a href="#">お客様の情報のSRKグループでの共同利用について</a></dd>
+                    </dl>  
+                        
+                    <dl class="notice">    
+                        <dt>2014年12月10日</dt>
+                        <dd><span class="info">お知らせ</span>
+                        <a href="#">LINE公式アカウントを開設しました！</a></dd>
+                    </dl>
+                            
+                    <dl class="news">
+                        <dt>2014年11月10日</dt>
+                        <dd><span class="rel">ニュースリリース</span><a href="#">【せらくダイレクト】ワンタイムパスワードの提供開始についてpdf(130KB)</a></dd>
+                    </dl>
                     
-                    <table class="march">
-                        <tr>
-                            <th><time class="date" datetime="2015-03-10">2015年3月10日</time></th>
-                            <td class="info">お知らせ</td>
-                            <td><a href="#">「年金情報流出」を口実にした振込め詐欺や個人情報の搾取にご注意ください。</a></td>
-                        </tr>
-                    </table>
+                    <dl class="campaign">
+                        <dt>2014年10月10日</dt>
+                        <dd><span class="cam">キャンペーン</span><a href="#">抽選でカタログギフトが当たる！保険の見直しキャンペーン実施中</a></dd>
+                    </dl>
                     
-                    <table class="february">
-                        <tr>
-                            <th><time class="date" datetime="2015-02-10">2015年2月10日</time></th>
-                            <td class="release">ニュースリリース</td>
-                            <td><a href="#">スウェーデンせらく銀行〇〇支店開業についてpdf(97KB)</a></td>
-                        </tr>
-                    </table>
-                    
-                    <table class="january">
-                        <tr>
-                            <th><time class="date" datetime="2015-01-10">2015年1月10日</time></th>
-                            <td class="info">お知らせ</td>
-                            <td><a href="#">お客様の情報のSRKグループでの共同利用について</a></td>
-                        </tr>
-                    </table>
-                    
-                    <table class="december">
-                        <tr>
-                            <th><time class="date" datetime="2015-12-10">2015年12月10日</time></th>
-                            <td class="info">お知らせ</td>
-                            <td><a href="#">LINE公式アカウントを開設しました！</a></td>
-                        </tr>
-                    </table>
-                    
-                    <table class="november">
-                        <tr>
-                            <th><time class="date" datetime="2015-11-10">2015年11月10日</time></th>
-                            <td class="release">ニュースリリース</td>
-                            <td><a href="#">【せらくダイレクト
-                            】ワンタイムパスワードの提供開始についてpdf(130KB)</a></td>
-                        </tr>
-                    </table>
-                    
-                    <table class="october">
-                        <tr>
-                            <th><time class="date" datetime="2015-10-10">2015年10月10日</time></th>
-                            <td class="cam">キャンペーン</td>
-                            <td><a href="#">抽選でカタログギフトが当たる！保険の見直しキャンペーン実施中</a></td>
-                        </tr>
-                    </table>
                 </div>
-                
                 
             </main>
             <div class="sidemenu">

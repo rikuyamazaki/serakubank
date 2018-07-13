@@ -55,6 +55,10 @@ img {
     margin-bottom: -20px;
     margin-top: 30px;
 }
+
+.global-link a:hover {
+    opacity: 0.5;
+}
 /************** mainメニュー *****************/
 .main {
     display: block;
@@ -191,14 +195,29 @@ img {
     font-size: 13px;
     color: #40408d;
 }
+
+.main .main_menu a:hover {
+    border-bottom: 1px solid #40408d;
+}
+
+.main .sub_menu a:hover {
+    border-bottom: 1px solid #40408d;
+}
+
+.main .under_left_menu a:hover {
+    border-bottom: 1px solid #40408d;
+}
+
+.main .under_right_menu a:hover {
+    border-bottom: 1px solid #40408d;
+}
 /*********** mainメニューここまで **************/
 
 
 /*********** mainのニュース情報  ***************/
 
-.campaign ul {
+.tab  {
     width: 100%;
-    overflow: hidden;
     position: relative;
     text-align: center;
     padding: 0;
@@ -208,9 +227,10 @@ img {
     height: 60px;
     line-height: 60px;
     border-bottom: 2px solid #2323b7;
+    color: #fff;
 }
 
-.campaign li {
+.tab li {
     display: table-cell;
     text-align: center;
     padding: 0;
@@ -218,15 +238,11 @@ img {
     border-right: 2px solid #fff;
 }
 
-.campaign a:link{
-    background: #b2b2b2;
-}
-
-.campaign .new a:visited {
+.tab .select {
     background: #00006d;
 }
 
-.campaign a {
+.tab a {
     text-decoration: none;
     display: block;
     font-size: 18px;
@@ -234,8 +250,12 @@ img {
     color: #fff;
 }
 
-.campaign .notice {
+.tab .notice {
     border-right: none;
+}
+
+.tab li:hover {
+    cursor: pointer;
 }
 
 /*********** mainのニュース情報ここまで  ***************/
@@ -312,58 +332,86 @@ ul.globalnavi li a:hover {
 }
 /************** global-naviここまで **************/
 
-/************** news ***************************/
+/************** tab_list ***************************/
 
-.news {
-    font-size: 13px;
-    margin-right: -20px;
-    
+#choice  {
+    font-size: 13px
 }
 
-.news tr th{
-    white-space: nowrap;
-    font-weight: normal;
+#choice dt{
+    width:9em;
+    float:left;
+    margin:0;
+    padding:20px 0 0 5px;
+    font-weight: bold;
 }
 
-.news td.cam,.info,.release {
-    white-space: nowrap;
-    width: 110px;
-    display: block;
-    text-align: center;
+#choice dd{
+    position:relative;
+    margin:15px 0 10px;
+    padding:15px 5px 10px 21em;
+}
+
+#choice dd a {
+    color: #00006d;
+}
+
+#choice dd a:hover {
+    opacity: 0.5;
+}
+
+#choice dd span.info{
+    display:block;
+    position:absolute;
+    top:0;
+    left:10em;
+    width:9em;
+    margin:0;
+    padding:0;
+    text-align:center;
+    background-color:#00c4ff;
     height: 20px;
     line-height: 20px;
+    margin-top: 15px;
     color: #fff;
 }
 
-.news .june td,.may td,.april td,.march td,.february td,.january td {
-    margin: 5px 30px 0 30px;
+#choice dd span.cam{
+    display:block;
+    position:absolute;
+    top:0;
+    left:10em;
+    width:9em;
+    margin:0;
+    padding:0;
+    text-align:center;
+    background-color:#ff7998;
+    height: 20px;
+    line-height: 20px;
+    margin-top: 15px;
+    color: #fff;
 }
 
-.news .december td,.november td,.october td {
-    margin: 5px 30px 0 22px;
+#choice dd span.rel{
+    display:block;
+    position:absolute;
+    top:0;
+    left:10em;
+    width:9em;
+    margin:0;
+    padding:0;
+    text-align:center;
+    background-color:#f2d24a;
+    height: 20px;
+    line-height: 20px;
+    margin-top: 15px;
+    color: #fff;
 }
 
-.news td a {
-    color: #2323b7;
-}
 
-table,.may,.april,.march,.february,.january,.december,.november,.october {
-    margin: 30px 0;
-}
 
-.news .info {
-    background: #00c3e6;
-}
 
-.news .cam {
-    background: #f06c99;
-}
-
-.news .release {
-    background: #e0b72d;
-}
-
-/************** newsここまで ********************/
+/************** tab_listここまで ********************/
 
 /************* sidemenu ***********************/
 
@@ -528,6 +576,10 @@ table,.may,.april,.march,.february,.january,.december,.november,.october {
     color: #00006d;
 }
 
+.under_menu a:hover {
+    opacity: 0.5;
+}
+
 /************* under-menuここまで ****************/
 
 /************* footer_menu ***********************/
@@ -554,6 +606,9 @@ table,.may,.april,.march,.february,.january,.december,.november,.october {
     color: #00006d;
 }
 
+.footer_menu a:hover {
+    opacity: 0.5;
+}
 
 
 /************* footer_menuここまで ***********************/
