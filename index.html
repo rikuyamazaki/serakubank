@@ -18,27 +18,27 @@
             });
         </script>
         <script>
-$(function() {
-// 「#tab」の「li」がクリックされると以下の処理を実行
-$(".tab li").click(function() {
-// 変数「tab」を定義する
-var tab = $(this).attr('id');
-// クリックされたタブにのみ「.select」を与える
-$(".tab li").removeClass('select');
-$(this).addClass('select');
-// クリックされたタブに紐づいた要素を表示、それ以外を非表示にする
-$("#choice dl").fadeOut(100);
-if(tab == 'news') {
-$("#choice .news").fadeIn(100);
-} else if(tab == 'campaign') {
-$("#choice .campaign").fadeIn(100);
-} else if(tab == 'notice') {
-$("#choice .notice").fadeIn(100);
-} else {
-$("#choice dl").fadeIn(100);
-}
-});
-});
+            $(function() {
+            // 「#tab」の「li」がクリックされると以下の処理を実行
+            $(".tab li").click(function() {
+                // 変数「tab」を定義する
+                var tab = $(this).attr('id');
+                // クリックされたタブにのみ「.select」を与える
+                $(".tab li").removeClass('select');
+                $(this).addClass('select');
+                // クリックされたタブに紐づいた要素を表示、それ以外を非表示にする
+                $("#choice dl").fadeOut(100);
+                    if(tab == 'news') {
+                        $("#choice .news").fadeIn(100);
+                        } else if(tab == 'campaign') {
+                            $("#choice .campaign").fadeIn(100);
+                        } else if(tab == 'notice') {
+                            $("#choice .notice").fadeIn(100);
+                        } else {
+                            $("#choice dl").fadeIn(100);
+                        }
+                    });
+                });
 
         </script>
     </head>
